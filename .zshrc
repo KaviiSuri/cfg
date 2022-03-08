@@ -215,4 +215,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh" > /dev/null
 
 # ==== DOTFILE MANAGER ============
+# src: https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=/home/kavii/.cfg/ --work-tree=/home/kavii'
+
