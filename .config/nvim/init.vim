@@ -51,7 +51,7 @@ call plug#end()
 " color schemes
 set t_Co=256
 set background=dark
-"let g:dracula_colorterm = 0
+let g:dracula_colorterm = 0
 colorscheme dracula 
 syntax enable
 
