@@ -218,3 +218,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # src: https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=/home/kavii/.cfg/ --work-tree=/home/kavii'
 
+# Ruby
+eval "$(rbenv init -)"

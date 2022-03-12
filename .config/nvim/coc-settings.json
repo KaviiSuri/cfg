@@ -15,5 +15,7 @@
           "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
           "filetypes": ["go"]
       }
-    }
+    },
+    "codeLens.enable": true,
+    "solargraph.useBundler": true
 }

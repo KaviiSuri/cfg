@@ -45,6 +45,9 @@ call plug#begin("~/.vim/plugged")
     Plug 'airblade/vim-gitgutter'
     " ==== GO Plugins ====
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    " ==== Ruby Plugins ===
+    Plug 'vim-ruby/vim-ruby'
+    Plug 'tpope/vim-rails'
 call plug#end()
 
 " == VISUAL SETTINGS =============================================
