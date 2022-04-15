@@ -14,10 +14,10 @@ set wildmode=longest,list 	" bash-like tab completions
 " == INDENTATION =================================================
 
 filetype plugin indent on 	" allows aut-indenting on file type
-set tabstop=4 			    " number of columns occupied by a tab character
+set tabstop=2 			    " number of columns occupied by a tab character
 set expandtab			    " converts tabs to white space
-set shiftwidth=4		    " width for autoindents
-set softtabstop=4		    " see multiple spaces as tabstops so <BS> does the right thing
+set shiftwidth=2		    " width for autoindents
+set softtabstop=2		    " see multiple spaces as tabstops so <BS> does the right thing
 set clipboard=unnamedplus   " using system clipboard
 set autoindent 			    " indent a new line the same amount as the line just typed
 
@@ -36,6 +36,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'preservim/nerdcommenter'
     Plug 'mhinz/vim-startify'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'ctrlpvim/ctrlp.vim'
     " ==== THEMES =======
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'vim-airline/vim-airline'
@@ -48,8 +49,15 @@ call plug#begin("~/.vim/plugged")
     " ==== Ruby Plugins ===
     Plug 'vim-ruby/vim-ruby'
     Plug 'tpope/vim-rails'
+    " ==== WebDev =========
+    Plug 'mattn/emmet-vim'
+    let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'othree/html5.vim'
+    Plug 'pangloss/vim-javascript'
+    Plug 'evanleck/vim-svelte', {'branch': 'main'}
 call plug#end()
-
 " == VISUAL SETTINGS =============================================
 " color schemes
 set t_Co=256
@@ -254,7 +262,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+    nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
@@ -272,3 +280,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient now [LC] (COC)
 let g:go_def_mapping_enabled = 0
+
+" == COC Commands Shorthands ==================================================
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
