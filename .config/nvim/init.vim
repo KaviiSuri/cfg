@@ -57,6 +57,10 @@ call plug#begin("~/.vim/plugged")
     Plug 'othree/html5.vim'
     Plug 'pangloss/vim-javascript'
     Plug 'evanleck/vim-svelte', {'branch': 'main'}
+    " ==== Rust ============
+    Plug 'rust-lang/rust.vim'
+    " To enable more of the features of rust-analyzer, such as inlay hints and more!
+    Plug 'simrat39/rust-tools.nvim'
 call plug#end()
 " == VISUAL SETTINGS =============================================
 " color schemes
