@@ -80,12 +80,6 @@ _G.packer_plugins = {
     path = "/home/kavii/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["bufferline.nvim"] = {
-    config = { 'require("i.setup.bufferline")' },
-    loaded = true,
-    path = "/home/kavii/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/kavii/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -259,6 +253,11 @@ _G.packer_plugins = {
     path = "/home/kavii/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/home/kavii/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/rust-lang/rust.vim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/kavii/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
@@ -303,42 +302,38 @@ time([[Config for nvim-treesitter]], false)
 time([[Config for nvim-cmp]], true)
 require("i.setup.cmp")
 time([[Config for nvim-cmp]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-require("i.setup.which-key")
-time([[Config for which-key.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require("i.setup.lualine")
-time([[Config for lualine.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require("i.setup.indentline")
-time([[Config for indent-blankline.nvim]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-require("i.setup.bufferline")
-time([[Config for bufferline.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-require("i.setup.toggleterm")
-time([[Config for toggleterm.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("i.setup.nvim-tree")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require("i.setup.indentline")
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+require("i.setup.which-key")
+time([[Config for which-key.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require("i.setup.toggleterm")
+time([[Config for toggleterm.nvim]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 require("i.setup.telescope")
 time([[Config for telescope.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-require("i.setup.gitsigns")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: rust-tools.nvim
 time([[Config for rust-tools.nvim]], true)
 require("i.setup.rust-tools")
 time([[Config for rust-tools.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require("i.setup.gitsigns")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require("i.setup.lualine")
+time([[Config for lualine.nvim]], false)
 -- Config for: nvim-config-local
 time([[Config for nvim-config-local]], true)
 require("i.setup.config-local")

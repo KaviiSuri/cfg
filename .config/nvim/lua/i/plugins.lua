@@ -66,10 +66,10 @@ return packer.startup(function(use)
     use "lunarvim/colorschemes" -- A collection of colorschemes to try out
     use "Mofiqul/dracula.nvim" -- Dracula Theme for Nvim
     use "ryanoasis/vim-devicons" -- Vim Dev Icons
-    use {
-        "akinsho/bufferline.nvim",
-        config = get_setup("bufferline"),
-    }
+    -- use {
+    --     "akinsho/bufferline.nvim",
+    --     config = get_setup("bufferline"),
+    -- }
     use "moll/vim-bbye"
     use {
         "lukas-reineke/indent-blankline.nvim",
@@ -134,11 +134,12 @@ return packer.startup(function(use)
     use "mfussenegger/nvim-dap"
 
     -- Rust ==============================================
+    use 'rust-lang/rust.vim'
     use {
         "simrat39/rust-tools.nvim",
         config = get_setup("rust-tools"),
+        requries = { "neovim/nvim-lspconfig" }
     }
-
     -- Fuzzy Finder ======================================
     use {
         "nvim-telescope/telescope.nvim",
