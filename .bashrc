@@ -156,3 +156,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
+## PROXY SETUP
+git conifg --global http.proxy $http_proxy
+git config --global https.proxy $https_proxy
