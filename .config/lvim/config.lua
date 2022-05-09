@@ -48,9 +48,19 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --     ["<C-k>"] = actions.move_selection_previous,
 --   },
 -- }
+function _G.ToggleHexMode()
+  if vim.b.hexmode then
+    vim.cmd("%!xxd -r")
+    vim.b.hexmode = false
+  else
+    vim.cmd("%!xxd")
+    vim.b.hexmode = true
+  end
+end
 
 -- Use which-key to add extra bindings with the leader-key prefix
-lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
+lvim.builtin.which_key.mappings["X"] = { ":lua ToggleHexMode()<cr>", "Toggle HexMode" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
 --   r = { "<cmd>Trouble lsp_references<cr>", "References" },
@@ -175,6 +185,11 @@ lvim.plugins = {
     end,
     ft = { "rust", "rs" },
   },
+  {
+    'rust-lang/rust.vim',
+    ft = { "rust", "rs" }
+  },
+  { "ellisonleao/glow.nvim", branch = 'main' }
 }
 
 -- lvim.plugins = {
